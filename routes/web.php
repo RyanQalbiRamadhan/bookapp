@@ -20,5 +20,5 @@ $router->get('/', function () use ($router) {
 // Menampilkan seluruh isi tabel
 $router->get('/books', 'BooksController@index');
 
-// Menampilkan data berdasarkan id dari tabelo
+// Menampilkan data berdasarkan id dari tabel
 $router->get('/books/{id}', 'BooksController@show');
