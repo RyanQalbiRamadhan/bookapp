@@ -5,13 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\Book;
 use Illuminate\Http\Request;
 
-class ExampleController extends Controller
+class BooksController extends Controller
 {
     public function index()
     {
         $books = Book::all();
         return response()->json([
-                'message' => 'Menampilkan semua buku',
                 'data' => $books
             ], 200);
     }
@@ -21,7 +20,6 @@ class ExampleController extends Controller
         $book = Book::find($id);
         if($book){
             return response()->json([
-                'message' => 'Book Found',
                 'data' => $book
             ], 200);
         } else {
