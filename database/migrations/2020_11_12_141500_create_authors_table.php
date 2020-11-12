@@ -17,7 +17,7 @@ class CreateAuthorsTable extends Migration
             $table->id();
             $table->string('name');
             $table->enum('gender', ['male', 'female']);
-            $table->text('biography');
+            $table->text('biograph');
             $table->timestamps();
         });
     }
