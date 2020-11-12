@@ -22,3 +22,12 @@ $router->get('/books', 'BooksController@index');
 
 // Menampilkan data berdasarkan id dari tabel
 $router->get('/books/{id}', 'BooksController@show');
+
+// Menambahkan data baru ke dalam tabel
+$router->post('books', 'BooksController@store');
+
+// Mengupdate data berdasarkan id dari tabel
+$router->put('books/{id}', 'BooksController@update');
+
+//Menghapus data berdasarkan id dari tabel
+$router->delete('books/{id}', 'BooksController@destroy');
